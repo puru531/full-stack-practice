@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+
+<body>
+<h1>Fetch</h1>
+<button onclick="getAnimalData()">Get Person Data</button>
+<div id="output"></div>
+
+<script>
+    function getAnimalData() {
+
+        /*
+        * arguments: fetch(url, options)
+        * url: the URL you want to request. --> if only the URL is provided, the request will be made with the GET method.
+        * options: an optional object containing any custom settings that you want to apply to the request.
+        * options: method, headers, body, mode, credentials, cache, redirect, referrer, referrerPolicy, integrity, keepalive, signal
+        * */
+
+        fetch('https://fakerapi.it/api/v1/persons') // fetch help us to make a request to the server, it returns a promise that resolves to the Response to that request, whether it is successful or not.
+            .then(response => response.json())
+            .then(data => {
+                const output = document.getElementById('output');
+                output.innerHTML = '';
+                console.log(data);
+                data?.data?.forEach(person => {
+                    const div = document.createElement('div');
+                    div.style.display = 'flex';
+                    const firstname = document.createElement('span');
+                    firstname.textContent = person.firstname;
+                    firstname.style.marginRight = '30px';
+                    const lastname = document.createElement('span')
+                    lastname.textContent = person.lastname;
+                    lastname.style.marginRight = '30px';
+                    const email = document.createElement('span')
+                    email.textContent = person.email;
+                    div.appendChild(firstname);
+                    div.appendChild(lastname);
+                    div.appendChild(email);
+                    output.appendChild(div);
+                });
+            });
+    }
+</script>
+</body>
+</html>

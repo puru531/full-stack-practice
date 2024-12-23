@@ -1,0 +1,41 @@
+1. Hashing
+2. Encryption
+3. JWT (JSON Web Token)
+4. Local Storage
+
+5. Hashing
+
+- Hashing is a process of converting a plain text into a random value.
+- Hashing is a one way process, meaning once a plain text is hashed, it cannot be converted back to plain text.
+- Hashing is used to store passwords in a database.
+- Hashing is used to check the integrity of data.
+- Hashing is used to generate a unique value for a given input.
+- A single input will always generate the same output.
+
+2. Encryption
+
+- Encryption is a process of converting a plain text into a cipher text.
+- Encryption is a two way process, meaning a cipher text can be converted back to plain text.
+- Encryption is used to secure data during transmission.
+- Encryption is used to secure data at rest.
+- Encryption is used to secure data in transit.
+- Encryption is used to secure data in a database.
+- Encryption requires a key to encrypt and decrypt data.
+
+3. JWT (JSON Web Token)
+
+- JWT is a standard for creating access tokens.
+- JWT is a compact, URL-safe means of representing claims to be transferred between two parties.
+- JWT is used to authenticate users.
+- JWT is used to authorize users.
+- JWT is used to securely transmit information between parties.
+- It takes JSON as input and returns a token.
+- Tokens are easily convertible to JSON.
+
+4. Local Storage
+
+- Local storage is a web storage that allows you to store data in the browser.
+- Local storage is persistent, meaning the data will not be lost when the browser is closed.
+- Local storage is used to store data on the client side.
+- Local storage is used to store data temporarily.
+- Local storage is used to store data that is not sensitive.

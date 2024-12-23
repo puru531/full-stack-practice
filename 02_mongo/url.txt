@@ -1,0 +1,5 @@
+MongoDB Compass:
+mongodb+srv://puru531:<db_password>@cluster0.jtkfa.mongodb.net/
+
+
+puru531
