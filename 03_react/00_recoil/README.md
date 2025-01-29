@@ -43,6 +43,19 @@ const [value, setValue] = useRecoilState(atomName);
 
 ## Selectors
 Selectors are derived state. They are functions that calculate a value based on the current state of our application. Selectors can depend on atoms and other selectors. They can be read from like atoms, but they cannot be written to.
+```jsx
+const selectorName = selector({
+  key: 'selectorName',
+  get: ({get}) => {
+    const value = get(atomName);
+    return value * 2;
+  },
+});
+
+
+const value = useRecoilValue(selectorName);
+
+```
 
 ## RecoilRoot
 The RecoilRoot component is used to provide the Recoil state to our application. It should be placed at the root of our application.
